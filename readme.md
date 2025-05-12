@@ -39,11 +39,7 @@ After installation , run this command:
 php artisan backpack-form:installation
 php artisan migrate
 ```
-After that you configure those variables in .env file with your paths :
-```bash
-FORMBUILDER_CSS_URL=
-FORMBUILDER_JS_URL=
-```
+
 
 
 
