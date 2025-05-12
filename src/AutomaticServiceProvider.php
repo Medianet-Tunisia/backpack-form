@@ -154,8 +154,28 @@ trait AutomaticServiceProvider
         return $this->path.'/config/'.$this->packageName.'.php';
     }
 
-    protected function packageRoutesFile() {
-        return $this->path.'/routes/'.$this->packageName.'.php';
+    protected function packageRoutesFile(): string
+    {
+        $packageRouteFile = $this->path . '/routes/' . $this->packageName . '.php';
+
+        $projectRouteFile = base_path('routes/' . $this->packageName . '.php');
+
+        $routeFilePathInUse = file_exists($projectRouteFile)
+            ? $projectRouteFile
+            : $packageRouteFile;
+
+        if (!file_exists($routeFilePathInUse)) {
+            throw new \RuntimeException(
+                sprintf(
+                    'No route file found for package "%s". Checked locations: %s and %s',
+                    $this->packageName,
+                    $packageRouteFile,
+                    $projectRouteFile
+                )
+            );
+        }
+
+        return $routeFilePathInUse;
     }
 
     protected function packageHelpersFile() {
