@@ -1,6 +1,6 @@
 <?php
 
-namespace MedianetDev\CloudMessage\Tests;
+namespace MedianetDev\BackpackForm\Tests;
 
 use MedianetDev\BackpackForm\AddonServiceProvider;
 use Orchestra\Testbench\TestCase;
