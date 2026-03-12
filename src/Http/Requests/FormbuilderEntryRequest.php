@@ -2,7 +2,6 @@
 
 namespace MedianetDev\BackpackForm\Http\Requests;
 
-use Illuminate\Support\Facades\Redirect;
 use Illuminate\Foundation\Http\FormRequest;
 
 class FormbuilderEntryRequest extends FormRequest
