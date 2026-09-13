@@ -58,4 +58,4 @@ return new class extends Migration
         Schema::dropIfExists('med_forms');
         Schema::dropIfExists('formbuilders');
     }
-}
+};

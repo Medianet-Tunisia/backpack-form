@@ -53,4 +53,4 @@ return new class extends Migration
         Schema::dropIfExists('med_form_field_val_tab_translations');
         Schema::dropIfExists('med_form_field_val_tab');
     }
-}
+};
