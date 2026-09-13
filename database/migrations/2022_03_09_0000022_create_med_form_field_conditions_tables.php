@@ -37,4 +37,4 @@ return new class extends Migration
     {
         Schema::dropIfExists('med_form_field_conditions');
     }
-}
+};
